@@ -206,3 +206,52 @@ body
   color: rgb(0, 166, 255);
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
+
+
+
+/*  RESPONSIVE USING MEDIA QUERIES  */
+
+@media only screen and (max-width: 400px)
+{
+
+    .mainContainer
+    {
+        width: 300px;
+       height: 65%;
+
+       margin-top: 50px;
+    }
+
+    .image
+    {
+        width: 220px;
+        height: 220px;
+    }
+
+    .songName
+    {
+        font-size: 1.4rem;
+    }
+
+    .artistName
+    {
+        font-size: 1rem;
+    }
+
+    .progress-container
+    {
+        width: 50%;
+    }
+
+    .controls > i
+    {
+        font-size: 2rem;
+    }
+
+    .fa-github-alt
+    {
+        font-size: 2.3rem;
+    }
+
+}
+
