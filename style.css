@@ -1,110 +1,208 @@
-/* Images created by: https://unsplash.com/@pawel_czerwinski */
+/*  CSS STYLING  */
 
-html {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Poppins:wght@200&family=Roboto:wght@300&family=Ubuntu:wght@300;400&display=swap');
+
+*
+{
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
+  border: none;
+  all: none;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: #c9ced3;
+body
+{
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(to right , black , rgb(56, 55, 55) , black);
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 12px;
+  font-family: Ubantu , sans-serif;
+}
+
+/* main container */
+
+.mainContainer
+{
+  width: 400px;
+  height: 70%;
+
+  background-color: rgb(228, 225, 225);
+
+  border-radius: 20px;
+
+  margin-top: 40px;
+
+  box-shadow: 2px 2px 18px rgb(0, 166, 255);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* image container */
+
+.image
+{
+  width: 290px;
+  height: 295px;
+
+  position: absolute;
+  z-index: 1;
+
+  top: 60px;
+
+  border-radius: 20px;
+
+  box-shadow: 2px 4px 15px rgb(0, 0, 0);
+}
+
+.image > img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 20px;
 }
 
 
+/* artist and song */
 
-.img-container {
+.text
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  position: relative;
-  top: -50px;
-  left: 50px;
+  position: absolute;
+  bottom: 37%;
+
+  z-index: 2;
 }
 
-
-h2 {
-  font-size: 25px;
-  text-align: center;
-  margin: 0;
-}
-
-h3 {
-  font-size: 20px;
-  text-align: center;
+.songName
+{
+  font-size: 1.7rem;
   font-weight: 400;
-  margin: 5px 0 0;
 }
 
-/* Progress */
-.progress-container {
-  background: #fff;
+.artistName
+{
+  font-size: 1.2rem;
+
+  padding-top: 5px;
+}
+
+
+/* slider */
+.slider
+{
+  position: absolute;
+  z-index: 2;
+
+  bottom: 30%;
+
+  display: none;
+}
+
+/* progress */
+
+.progress-container
+{
+  background-color: white;
   border-radius: 5px;
   cursor: pointer;
   margin: 40px 20px;
   height: 4px;
-  width: 90%;
+  width: 23%;
+
+  top: 65%;
+
+  position: absolute;
+  z-index: 2;
 }
 
-.progress {
+.progress
+{
   background: #242323;
   border-radius: 5px;
   height: 100%;
+
   /* change this to show progress */
-  width: 66%;
+  width: 0%;
   transition: width 0.1s linear;
 }
 
-.duration-wrapper {
+.duration-wrapper
+{
   position: relative;
-  top: -25px;
+  top: -20px;
   display: flex;
   justify-content: space-between;
 }
 
-/* Controls */
-.player-controls {
-  position: relative;
-  top: -15px;
-  left: 120px;
-  width: 200px;
-}
 
-.fas {
-  font-size: 30px;
-  color: rgb(129, 129, 129);
-  margin-right: 30px;
 
+.github
+{
+  position: absolute;
+  z-index: 10;
+
+  left: 30px;
+  top: 30px;
 }
 
 
+/* controls */
 
-.main-button {
-  font-size: 40px;
-  position: relative;
-  top: 3px;
+.controls
+{
+  position: absolute;
+  z-index: 2;
+  top: 75%;
 }
 
-/* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 376px) {
+.controls > i
+{
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+
+  text-shadow: 1px 1px 2px rgb(0, 166, 255);
+  padding-left: 10px;
+  padding-right: 10px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.controls > i:hover
+{
+  color: rgb(0, 166, 255);
+  text-shadow: 1px 1px 2px black;
+}
 
 
-  .img-container {
-    left: 29px;
-  }
 
-  h2 {
-    font-size: 20px;
-  }
+.fa-github-alt
+{
+  color: white;
+  padding: 3px;
 
-  h3 {
-    font-size: 15px;
-  }
+  font-size: 3rem;
 
-  .player-controls {
-    top: -10px;
-    left: 100px;
-  }
+  text-shadow: 2px 2px 2px rgb(0, 166, 255);
+}
+
+.fa-github-alt:hover
+{
+  color: rgb(0, 166, 255);
+  text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }

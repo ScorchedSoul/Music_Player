@@ -7,10 +7,56 @@
     <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG11c2ljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/9d3faebd6c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <!-- Main Container -->
+    <div class="mainContainer" id="mainContainer">
 
+        <!-- Image division -->
+        <div class="image" id="image">
+            <img src="./img/jacinto-1.jpg" alt="">
+        </div>
+
+        <!-- ARTIS AND SOND CONTAINER -->
+        <div class="text">
+            <div class="songName" id="songName">
+                Electric Chill Machine
+            </div>
+    
+            <div class="artistName" id="artistName">
+                Jacinto Design
+            </div>
+        </div>
+
+        <!-- SLIDER -->
+        <div class="slider">
+            <audio src="./music/jacinto-1.mp3" controls></audio>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper" id="duration-wrapper">
+                <span id="currentTime">0:00</span>
+                <span class="duration">2:06</span>
+            </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="controls">
+            <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+            <i class="fa-solid fa-circle-play" id="play" title="Play"></i>
+            <i class="fa-solid fa-forward" id="next" title="Next"></i>
+        </div>
+
+    </div>
+
+    <div class="github">
+        <a href="https://github.com/ScorchedSoul/Music_Player" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+    </div>
 
 
     
