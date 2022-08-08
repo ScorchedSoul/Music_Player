@@ -5,9 +5,11 @@
 const image = document.querySelector('img');
 const songName = document.getElementById('songName');
 const artistName = document.getElementById('artistName');
+
 const music = document.querySelector('audio');
 const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
+
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
