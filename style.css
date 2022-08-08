@@ -226,6 +226,8 @@ body
     {
         width: 220px;
         height: 220px;
+
+        top: 75px;
     }
 
     .songName
@@ -246,6 +248,12 @@ body
     .controls > i
     {
         font-size: 2rem;
+    }
+
+    .github
+    {
+      top: 5px;
+      left: 8px;
     }
 
     .fa-github-alt
