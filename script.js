@@ -14,28 +14,59 @@ const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
+
 // music array
 
 const songs = [
     {
-        name: 'jacinto-1',
-        displayName : 'Electric Chill Machine',
-        artistName : 'Jacinto Design',
+        name: 'm1',
+        displayName : 'Alag Aasmaan',
+        artistName : 'Anu Jain',
     },
     {
-        name: 'jacinto-2',
-        displayName: 'Seven Nation Army (Remix)',
-        artistName: 'Jacinto Design',
+        name: 'm2',
+        displayName: 'Dhalti Rahe',
+        artistName: 'Twin Strings',
     },
     {
-        name: 'jacinto-3',
-        displayName: 'Goodnight, Disco Queen',
-        artistName: 'Jacinto Design',
+        name: 'm3',
+        displayName: 'Muskaan',
+        artistName: 'Dikshant',
     },
     {
-        name: 'metric-1',
-        displayName: 'Front Row',
-        artistName: 'Jacinto Design'
+        name: 'm4',
+        displayName: 'Dil Patang',
+        artistName: 'KhoslaRaghu',
+    },
+    {
+        name: 'm5',
+        displayName : 'Kaari',
+        artistName : 'Adarsh Rao',
+    },
+    {
+        name: 'm6',
+        displayName : 'O Meri Laila',
+        artistName : 'Atif Aslam',
+    },
+    {
+        name: 'm7',
+        displayName : 'Aaj Mohabbat',
+        artistName : 'Aditya Rikhari',
+    },
+    {
+        name: 'm8',
+        displayName : 'Pahadon Mein',
+        artistName : 'Salman Elahi',
+    },
+    {
+        name: 'm9',
+        displayName : 'Sang Rahiyo',
+        artistName : 'Jasleen Royal',
+    },
+    {
+        name: 'm10',
+        displayName : 'Khoya',
+        artistName : 'Aseem',
     }
 ]
 
@@ -71,7 +102,9 @@ function loadSong(songs)
 {
     songName.textContent = songs.displayName;
     artistName.textContent = songs.artistName;
-    music.src = `music/${songs.name}.mp3`;
+    // music.src = `music/${songs.name}.mp3`;
+    music.src = `music_new/${songs.name}.mp3`;
+    // image.src = `img/${songs.name}.jpg`;
     image.src = `img/${songs.name}.jpg`;
 }
 
@@ -109,24 +142,24 @@ const prevSong = function()
 // on load select first song
 loadSong(songs[songIndex]);
 
-//  next / prev
-
-nextBtn.addEventListener('click',nextSong);
-prevBtn.addEventListener('click',prevSong);
-
 
 // update progress bar and time
 const updateProgressBar = function(e)
 {
-    if (isPlaying = true)
+    if (isPlaying)
     {
-        const {duration , currentTime} = e.srcElement;
+        const { duration , currentTime} = e.srcElement;
 
         // update progress bar 
-        const progressPercent = (currentTime/duration)*100 ;
-        progress.style.width = `${progressPercent}%`
+        const progressPercent = (currentTime / duration)*100 ;
+        progress.style.width = `${progressPercent}%`;
     }
-}
+        
+    }
+
+
+
+    
 
 // progress bar updated
 music.addEventListener('timeupdate', updateProgressBar);
@@ -148,3 +181,9 @@ progressContainer.addEventListener('click' , setProgressBar);
 // music ends
 music.addEventListener('ended', nextSong);
 
+
+//Event Listners
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+music.addEventListener('ended', nextSong);
+music.addEventListener('timeupdate', updateProgressBar);
